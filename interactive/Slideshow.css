@@ -1,0 +1,49 @@
+#overlay-container {	
+backgroundColor: black;
+float:left; 
+pointer-events:none; 
+overflow:hidden; 
+width:720px; 
+height:680px; 
+/*position: absolute; */
+/*left: 0px; 
+bottom: 0; */
+
+}
+
+.side-by-side {
+  /*display: flex;
+  vertical-align: bottom;*/
+ /* position: absolute;
+  bottom: 0;*/
+  min-width: 700px;
+  list-style: none;
+  padding-top: 550px;
+  
+}
+
+.column {
+	/*flex: 10%;
+	padding: 3px;
+	align-content: flex-end;
+	position: relative;*/
+	display: inline;
+}
+
+.column:hover {
+	cursor: pointer;
+}
+
+.desc {
+	text-align: center;
+	/*padding: 15px;*/
+	color: white;
+	visibility: hidden;
+	position: absolute;
+	/*width: 60px;
+	height: 40px;*/
+}
+
+.column:hover .desc {
+	visibility: visible;
+}

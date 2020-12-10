@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<!--
+
+-->
+<html>
+<head>
+	<meta charset="UTF-8">
+
+	<title>Slideshow_indiana_postFlash</title>
+<!-- write your code here -->
+
+<link rel="stylesheet" href="Slideshow.css">
+
+<!-- write your code here -->
+</head>
+<body>
+<div class="container">
+
+
+	<div id="animation_container" style="background-color:black; width:720px; height:680px; position:relative; display: inline-block;">
+		<!--<canvas id="canvas" width="720" height="680" style="position: absolute; display: block; background-color:rgba(0, 0, 0, 1.00);"></canvas>-->
+		<!--<div id="overlay_container" style="float:right; pointer-events:none; overflow:hidden; width:720px; height:680px; position: absolute; left: 0px; top: 0px; display: block;">-->
+	<!--</div>-->
+	
+	<div id="thumbs" style="display: block;">
+		<ul class="side-by-side">
+			<li class="column">
+				<div class="desc">Jennings County Road</div>
+				<img src="assets_Indiana/thumbs/indiana_d6341_op.jpg" onClick="bigImage(this)">
+			</li>
+			<li class="column">
+				<div class="desc">Baggy Bottom Boys</div>
+				<img src="assets_Indiana/thumbs/indiana_d7066_op.jpg" onClick="bigImage(this)">
+			</li>
+			<li class="column">
+				<div class="desc">Ertel Winery - Ripley County</div>
+				<img src="assets_Indiana/thumbs/indiana_d7358_op.jpg" onClick="bigImage(this)">
+			</li>
+			<li class="column">
+				<div class="desc">Marie Kerr - Baby quilts</div>
+				<img src="assets_Indiana/thumbs/indiana_d7545_op.jpg" onClick="bigImage(this)">
+			</li>
+			<li class="column">
+				<div class="desc">Jennings County</div>
+				<img src="assets_Indiana/thumbs/indiana_d7872_op.jpg" onClick="bigImage(this)">
+			</li>
+			<li class="column">
+				<div class="desc">Ohio River</div>
+				<img src="assets_Indiana/thumbs/indiana_d8859_op.jpg" onClick="bigImage(this)">
+			</li>
+			<li class="column">
+				<div class="desc">Franklin County</div>
+				<img src="assets_Indiana/thumbs/indiana_d8877_franklin_op.jpg" onClick="bigImage(this)">
+			</li>
+			<li class="column">
+				<div class="desc">Franklin County barn</div>
+				<img src="assets_Indiana/thumbs/indiana_d8884_franklin_op.jpg" onClick="bigImage(this)">
+			</li>
+			<li class="column">
+				<div class="desc">Ohio County</div>
+				<img src="assets_Indiana/thumbs/ohio_d8802_op.jpg" onClick="bigImage(this)">
+			</li>
+			<li class="column">
+				<div class="desc">Ohio County</div>
+				<img src="assets_Indiana/thumbs/ohio_d8966_op.jpg" onClick="bigImage(this)">
+			</li>
+		</ul>
+	</div>
+	<script>
+	function bigImage(img, div) {
+		//const IMAGES = document.querySelectorAll("img");
+		//var theURL = window.location.pathname;
+		//varURL = "assets_Indiana/thumbs/indiana_d6341_op.jpg"
+		//return theURL.replace("/thumbs/", "/big/");
+		//log.theURL;
+		//document.getElementById("demo").innerHTML = "You clicked me";
+		var imgSrc = img.getAttribute("src");
+		newSrc = imgSrc.replace("thumbs", "big");
+		//var img = document.createElement("img");
+		//img.src = newSrc;
+		var node = document.createElement('li');
+		node.innerHTML = ("<img src='" + newSrc + "' " + "style=" + "'background-color: white; position: absolute; top: 0px; left: 0px;'" + ">");
+		document.body.appendChild(node);
+		
+		//this.document.getElementByID("animation-container").style.background-color="black";
+		
+		//var overlay = div.getAttribute("id");
+		//newOverlay = overlay.replace("animation-container", "overlay-container");
+		//var styleNode = document.createElement('div');
+		//styleNode.innerHTML = ("<div id='" + newOverlay + "' " + "style=" + "'background-color: black;'" + ">");
+		//document.body.appendChild(styleNode);
+		
+		console.log(newSrc);
+	}
+	</script>
+</div>
+</body>
+</html>
